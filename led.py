@@ -130,9 +130,18 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
     send_tcp_message(sock, "000055aa00000000000000090000000865930c220000aa55")
     data=sock.recv(28+91)
     print(''.join('{:02x}'.format(x) for x in data))
-    time.sleep(0.1)
+    time.sleep(2.0)
     send_tcp_message(sock, "000055aa000006a10000000d00000037332e33000000000000000d00065a4ee294d4ce0d3852e421e0aed7313f5c0656b333f24acbd27900551d55b51c96a4613f0e950000aa55")
     data=sock.recv(28+91)
     print(''.join('{:02x}'.format(x) for x in data))
+    time.sleep(2.0)
 
+    send_tcp_message(sock, "000055aa000006430000000d00000037332e330000000000000005000a802a97b0ecbbb191e8e65ec46176b940fbb91664daeb717f299f22ebb393e4363d4a79ca8b2c0000aa55")
+    data=sock.recv(28+91)
+    print(''.join('{:02x}'.format(x) for x in data))
+    time.sleep(2.0)
+
+    send_tcp_message(sock, "000055aa000004110000000d00000037332e33000000000000001400097d05d61b9e317c2ea369291e42218902f4fdbb09328ff6cb29b2623305933d148e10749506180000aa55")
+    data=sock.recv(28+91)
+    print(''.join('{:02x}'.format(x) for x in data))
 
